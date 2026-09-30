@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Transaction | FinTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-mark small">₹</div>
+    <div><strong>FinTrack</strong><small>Personal Finance</small></div>
+  </div>
+  <nav class="nav-links">
+    <a href="dashboard.html" data-page="dashboard"><span>⌂</span> Dashboard</a>
+    <a href="add-transaction.html" data-page="add"><span>＋</span> Add Transaction</a>
+    <a href="transactions.html" data-page="transactions"><span>↕</span> Transactions</a>
+    <a href="budget.html" data-page="budget"><span>◫</span> Budget</a>
+    <a href="reports.html" data-page="reports"><span>◔</span> Reports</a>
+    <a href="goals.html" data-page="goals"><span>◎</span> Goals</a>
+    <a href="settings.html" data-page="settings"><span>⚙</span> Settings</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <button class="logout-link" id="logoutBtn"><span>↪</span> Logout</button>
+  </div>
+</aside>
+
+  <div class="app-main">
+
+<header class="topbar">
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="topbar-title">
+    <span class="eyebrow">PERSONAL FINANCE</span>
+    <h2 id="pageTitle">Dashboard</h2>
+  </div>
+  <div class="topbar-actions">
+    <div class="user-chip"><div class="avatar" id="userAvatar">U</div><div><strong id="topUserName">User</strong><small id="topUserEmail">user@example.com</small></div></div>
+  </div>
+</header>
+
+    <main class="page-content" data-page="add">
+
+<section class="page-heading"><span class="eyebrow">MONEY MOVEMENT</span><h1>Add Transaction</h1><p class="muted">Record your income or expense and keep your finances up to date.</p></section>
+<div class="form-card">
+  <div id="transactionMessage" class="message hidden"></div>
+  <form id="transactionForm" class="form-grid">
+    <label>Transaction Type
+      <select id="transactionType" required><option value="expense">Expense</option><option value="income">Income</option></select>
+    </label>
+    <label>Amount
+      <input id="transactionAmount" type="number" min="0.01" step="0.01" placeholder="0.00" required>
+    </label>
+    <label>Category
+      <select id="transactionCategory" required>
+        <option>Food</option><option>Transport</option><option>Education</option><option>Shopping</option><option>Bills</option><option>Entertainment</option><option>Healthcare</option><option>Salary</option><option>Freelance</option><option>Other</option>
+      </select>
+    </label>
+    <label>Date
+      <input id="transactionDate" type="date" required>
+    </label>
+    <label class="full">Description
+      <input id="transactionDescription" type="text" maxlength="100" placeholder="e.g. Monthly groceries" required>
+    </label>
+    <label>Payment Method
+      <select id="paymentMethod" required><option>UPI</option><option>Cash</option><option>Debit Card</option><option>Credit Card</option><option>Bank Transfer</option><option>Other</option></select>
+    </label>
+    <div class="form-actions"><button class="btn btn-primary" type="submit">Save Transaction</button><a class="btn btn-light" href="transactions.html">Cancel</a></div>
+  </form>
+</div>
+
+    </main>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>

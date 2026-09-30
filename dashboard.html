@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | FinTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-mark small">₹</div>
+    <div><strong>FinTrack</strong><small>Personal Finance</small></div>
+  </div>
+  <nav class="nav-links">
+    <a href="dashboard.html" data-page="dashboard"><span>⌂</span> Dashboard</a>
+    <a href="add-transaction.html" data-page="add"><span>＋</span> Add Transaction</a>
+    <a href="transactions.html" data-page="transactions"><span>↕</span> Transactions</a>
+    <a href="budget.html" data-page="budget"><span>◫</span> Budget</a>
+    <a href="reports.html" data-page="reports"><span>◔</span> Reports</a>
+    <a href="goals.html" data-page="goals"><span>◎</span> Goals</a>
+    <a href="settings.html" data-page="settings"><span>⚙</span> Settings</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <button class="logout-link" id="logoutBtn"><span>↪</span> Logout</button>
+  </div>
+</aside>
+
+  <div class="app-main">
+
+<header class="topbar">
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="topbar-title">
+    <span class="eyebrow">PERSONAL FINANCE</span>
+    <h2 id="pageTitle">Dashboard</h2>
+  </div>
+  <div class="topbar-actions">
+    <div class="user-chip"><div class="avatar" id="userAvatar">U</div><div><strong id="topUserName">User</strong><small id="topUserEmail">user@example.com</small></div></div>
+  </div>
+</header>
+
+    <main class="page-content" data-page="dashboard">
+
+<section class="welcome-row">
+  <div><span class="eyebrow">OVERVIEW</span><h1>Good day, <span id="welcomeName">there</span> 👋</h1><p class="muted">Here is your current financial snapshot.</p></div>
+  <a class="btn btn-primary" href="add-transaction.html">＋ Add Transaction</a>
+</section>
+<section class="stat-grid">
+  <article class="stat-card balance"><div class="stat-icon">₹</div><div><span>Total Balance</span><strong id="dashBalance">₹0</strong><small>Available balance</small></div></article>
+  <article class="stat-card income"><div class="stat-icon">↗</div><div><span>Total Income</span><strong id="dashIncome">₹0</strong><small>All recorded income</small></div></article>
+  <article class="stat-card expense"><div class="stat-icon">↘</div><div><span>Total Expenses</span><strong id="dashExpense">₹0</strong><small>All recorded expenses</small></div></article>
+  <article class="stat-card saving"><div class="stat-icon">◈</div><div><span>Savings</span><strong id="dashSavings">₹0</strong><small>Income minus expenses</small></div></article>
+</section>
+<section class="content-grid two-one">
+  <article class="panel">
+    <div class="panel-head"><div><h3>Monthly Budget</h3><p class="muted">Current month spending</p></div><a href="budget.html" class="text-link">Manage →</a></div>
+    <div class="budget-overview">
+      <div class="progress-ring" id="budgetRing"><span id="budgetPercent">0%</span></div>
+      <div><strong id="dashBudgetRemaining">₹0</strong><p class="muted">remaining of <span id="dashBudget">₹0</span></p><div class="mini-progress"><i id="dashBudgetBar"></i></div><small id="budgetStatus">Set a monthly budget to begin.</small></div>
+    </div>
+  </article>
+  <article class="panel quick-panel">
+    <div class="panel-head"><div><h3>Quick Actions</h3><p class="muted">Jump to common tasks</p></div></div>
+    <div class="quick-actions">
+      <a href="add-transaction.html">＋ Add Transaction</a>
+      <a href="transactions.html">↕ View Transactions</a>
+      <a href="budget.html">◫ Manage Budget</a>
+      <a href="goals.html">◎ Savings Goals</a>
+    </div>
+  </article>
+</section>
+<section class="content-grid two-one">
+  <article class="panel">
+    <div class="panel-head"><div><h3>Recent Transactions</h3><p class="muted">Your latest activity</p></div><a href="transactions.html" class="text-link">View all →</a></div>
+    <div class="transaction-list" id="recentTransactions"></div>
+  </article>
+  <article class="panel">
+    <div class="panel-head"><div><h3>Expense Summary</h3><p class="muted">By category</p></div><a href="reports.html" class="text-link">Reports →</a></div>
+    <div id="expenseSummary"></div>
+  </article>
+</section>
+
+    </main>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>

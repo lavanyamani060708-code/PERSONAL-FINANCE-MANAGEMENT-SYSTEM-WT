@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goals | FinTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-mark small">₹</div>
+    <div><strong>FinTrack</strong><small>Personal Finance</small></div>
+  </div>
+  <nav class="nav-links">
+    <a href="dashboard.html" data-page="dashboard"><span>⌂</span> Dashboard</a>
+    <a href="add-transaction.html" data-page="add"><span>＋</span> Add Transaction</a>
+    <a href="transactions.html" data-page="transactions"><span>↕</span> Transactions</a>
+    <a href="budget.html" data-page="budget"><span>◫</span> Budget</a>
+    <a href="reports.html" data-page="reports"><span>◔</span> Reports</a>
+    <a href="goals.html" data-page="goals"><span>◎</span> Goals</a>
+    <a href="settings.html" data-page="settings"><span>⚙</span> Settings</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <button class="logout-link" id="logoutBtn"><span>↪</span> Logout</button>
+  </div>
+</aside>
+
+  <div class="app-main">
+
+<header class="topbar">
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="topbar-title">
+    <span class="eyebrow">PERSONAL FINANCE</span>
+    <h2 id="pageTitle">Dashboard</h2>
+  </div>
+  <div class="topbar-actions">
+    <div class="user-chip"><div class="avatar" id="userAvatar">U</div><div><strong id="topUserName">User</strong><small id="topUserEmail">user@example.com</small></div></div>
+  </div>
+</header>
+
+    <main class="page-content" data-page="goals">
+
+<section class="page-heading"><span class="eyebrow">FUTURE YOU</span><h1>Financial Goals</h1><p class="muted">Turn your savings plans into measurable milestones.</p></section>
+<div id="goalMessage" class="message hidden"></div>
+<section class="form-card">
+  <h3>Create a Savings Goal</h3>
+  <form id="goalForm" class="form-grid">
+    <label>Goal Name<input id="goalName" type="text" placeholder="e.g. New Laptop" required></label>
+    <label>Target Amount<input id="goalTarget" type="number" min="1" step="0.01" placeholder="50000" required></label>
+    <label>Current Saved Amount<input id="goalSaved" type="number" min="0" step="0.01" placeholder="10000" required></label>
+    <label>Target Date<input id="goalDate" type="date" required></label>
+    <div class="form-actions"><button class="btn btn-primary" type="submit">Create Goal</button></div>
+  </form>
+</section>
+<section id="goalsGrid" class="goals-grid"></section>
+
+    </main>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>

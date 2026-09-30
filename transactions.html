@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions | FinTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-mark small">₹</div>
+    <div><strong>FinTrack</strong><small>Personal Finance</small></div>
+  </div>
+  <nav class="nav-links">
+    <a href="dashboard.html" data-page="dashboard"><span>⌂</span> Dashboard</a>
+    <a href="add-transaction.html" data-page="add"><span>＋</span> Add Transaction</a>
+    <a href="transactions.html" data-page="transactions"><span>↕</span> Transactions</a>
+    <a href="budget.html" data-page="budget"><span>◫</span> Budget</a>
+    <a href="reports.html" data-page="reports"><span>◔</span> Reports</a>
+    <a href="goals.html" data-page="goals"><span>◎</span> Goals</a>
+    <a href="settings.html" data-page="settings"><span>⚙</span> Settings</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <button class="logout-link" id="logoutBtn"><span>↪</span> Logout</button>
+  </div>
+</aside>
+
+  <div class="app-main">
+
+<header class="topbar">
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="topbar-title">
+    <span class="eyebrow">PERSONAL FINANCE</span>
+    <h2 id="pageTitle">Dashboard</h2>
+  </div>
+  <div class="topbar-actions">
+    <div class="user-chip"><div class="avatar" id="userAvatar">U</div><div><strong id="topUserName">User</strong><small id="topUserEmail">user@example.com</small></div></div>
+  </div>
+</header>
+
+    <main class="page-content" data-page="transactions">
+
+<section class="page-heading"><span class="eyebrow">ACTIVITY</span><h1>Transactions</h1><p class="muted">Search, filter and manage all your recorded transactions.</p></section>
+<section class="summary-strip">
+  <div><span>Income</span><strong class="income-text" id="transactionIncomeTotal">₹0</strong></div>
+  <div><span>Expenses</span><strong class="expense-text" id="transactionExpenseTotal">₹0</strong></div>
+  <div><span>Net</span><strong id="transactionNetTotal">₹0</strong></div>
+</section>
+<section class="panel">
+  <div class="toolbar">
+    <input id="transactionSearch" type="search" placeholder="⌕ Search description or category...">
+    <select id="transactionTypeFilter"><option value="all">All Types</option><option value="income">Income</option><option value="expense">Expense</option></select>
+    <select id="transactionCategoryFilter"><option value="all">All Categories</option></select>
+    <button id="clearTransactions" class="btn btn-danger-outline" type="button">Clear All</button>
+  </div>
+  <div class="table-wrap">
+    <table><thead><tr><th>Date</th><th>Type</th><th>Category</th><th>Description</th><th>Payment</th><th>Amount</th><th>Action</th></tr></thead><tbody id="transactionsTable"></tbody></table>
+  </div>
+  <div id="emptyTransactions" class="empty-state hidden"><div>◎</div><h3>No transactions found</h3><p class="muted">Try changing the filters or add a new transaction.</p><a class="btn btn-primary" href="add-transaction.html">Add Transaction</a></div>
+</section>
+
+    </main>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Finance Management System | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+  <main class="auth-shell">
+    <section class="auth-hero">
+      <div class="brand-mark">₹</div>
+      <span class="eyebrow">SMART MONEY • SIMPLE LIFE</span>
+      <h1>Personal Finance<br><span>Management System</span></h1>
+      <p>Track income, control expenses, plan budgets and build savings goals — all directly in your browser.</p>
+      <div class="feature-pills">
+        <span>✓ Local & Private</span>
+        <span>✓ No Backend</span>
+        <span>✓ Easy Tracking</span>
+      </div>
+    </section>
+
+    <section class="auth-card">
+      <div class="mobile-brand">
+        <div class="brand-mark">₹</div>
+      </div>
+      <h2>Welcome back</h2>
+      <p class="muted">Sign in to continue to your finance dashboard.</p>
+
+      <div id="authMessage" class="message hidden"></div>
+
+      <form id="loginForm" class="form-stack">
+        <label>Email
+          <input id="loginEmail" type="email" placeholder="you@example.com" required>
+        </label>
+        <label>Password
+          <input id="loginPassword" type="password" placeholder="Enter password" required>
+        </label>
+        <button class="btn btn-primary btn-block" type="submit">Sign In <span>→</span></button>
+      </form>
+
+      <button id="demoLogin" class="btn btn-demo btn-block" type="button">Try Demo Account</button>
+
+      <div class="divider"><span>or</span></div>
+
+      <form id="registerForm" class="form-stack">
+        <label>New user name
+          <input id="registerName" type="text" placeholder="Your name" required>
+        </label>
+        <label>New email
+          <input id="registerEmail" type="email" placeholder="you@example.com" required>
+        </label>
+        <label>Password
+          <input id="registerPassword" type="password" minlength="4" placeholder="Minimum 4 characters" required>
+        </label>
+        <button class="btn btn-outline btn-block" type="submit">Create Local Account</button>
+      </form>
+
+      <p class="auth-note">Demo/local accounts are stored only in this browser using localStorage.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

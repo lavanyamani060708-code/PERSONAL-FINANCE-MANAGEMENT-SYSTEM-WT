@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports | FinTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-mark small">₹</div>
+    <div><strong>FinTrack</strong><small>Personal Finance</small></div>
+  </div>
+  <nav class="nav-links">
+    <a href="dashboard.html" data-page="dashboard"><span>⌂</span> Dashboard</a>
+    <a href="add-transaction.html" data-page="add"><span>＋</span> Add Transaction</a>
+    <a href="transactions.html" data-page="transactions"><span>↕</span> Transactions</a>
+    <a href="budget.html" data-page="budget"><span>◫</span> Budget</a>
+    <a href="reports.html" data-page="reports"><span>◔</span> Reports</a>
+    <a href="goals.html" data-page="goals"><span>◎</span> Goals</a>
+    <a href="settings.html" data-page="settings"><span>⚙</span> Settings</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <button class="logout-link" id="logoutBtn"><span>↪</span> Logout</button>
+  </div>
+</aside>
+
+  <div class="app-main">
+
+<header class="topbar">
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="topbar-title">
+    <span class="eyebrow">PERSONAL FINANCE</span>
+    <h2 id="pageTitle">Dashboard</h2>
+  </div>
+  <div class="topbar-actions">
+    <div class="user-chip"><div class="avatar" id="userAvatar">U</div><div><strong id="topUserName">User</strong><small id="topUserEmail">user@example.com</small></div></div>
+  </div>
+</header>
+
+    <main class="page-content" data-page="reports">
+
+<section class="page-heading"><span class="eyebrow">INSIGHTS</span><h1>Financial Reports</h1><p class="muted">Understand where your money comes from and where it goes.</p></section>
+<section class="stat-grid compact-stats">
+  <article class="stat-card income"><div class="stat-icon">↗</div><div><span>Total Income</span><strong id="reportIncome">₹0</strong></div></article>
+  <article class="stat-card expense"><div class="stat-icon">↘</div><div><span>Total Expenses</span><strong id="reportExpense">₹0</strong></div></article>
+  <article class="stat-card saving"><div class="stat-icon">◈</div><div><span>Savings</span><strong id="reportSavings">₹0</strong></div></article>
+  <article class="stat-card balance"><div class="stat-icon">★</div><div><span>Highest Category</span><strong class="small-value" id="highestCategory">—</strong></div></article>
+</section>
+<section class="content-grid two-one">
+  <article class="panel"><div class="panel-head"><div><h3>Category-wise Expenses</h3><p class="muted">Visual spending distribution</p></div></div><div id="categoryChart" class="bar-chart"></div></article>
+  <article class="panel"><div class="panel-head"><div><h3>Income vs Expense</h3><p class="muted">Overall comparison</p></div></div><div id="incomeExpenseChart" class="comparison-chart"></div></article>
+</section>
+<section class="panel"><div class="panel-head"><div><h3>Monthly Spending Summary</h3><p class="muted">Expense totals grouped by month</p></div></div><div id="monthlyChart" class="monthly-chart"></div></section>
+
+    </main>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>

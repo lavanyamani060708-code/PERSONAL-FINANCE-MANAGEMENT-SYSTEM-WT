@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | FinTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-mark small">₹</div>
+    <div><strong>FinTrack</strong><small>Personal Finance</small></div>
+  </div>
+  <nav class="nav-links">
+    <a href="dashboard.html" data-page="dashboard"><span>⌂</span> Dashboard</a>
+    <a href="add-transaction.html" data-page="add"><span>＋</span> Add Transaction</a>
+    <a href="transactions.html" data-page="transactions"><span>↕</span> Transactions</a>
+    <a href="budget.html" data-page="budget"><span>◫</span> Budget</a>
+    <a href="reports.html" data-page="reports"><span>◔</span> Reports</a>
+    <a href="goals.html" data-page="goals"><span>◎</span> Goals</a>
+    <a href="settings.html" data-page="settings"><span>⚙</span> Settings</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <button class="logout-link" id="logoutBtn"><span>↪</span> Logout</button>
+  </div>
+</aside>
+
+  <div class="app-main">
+
+<header class="topbar">
+  <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="topbar-title">
+    <span class="eyebrow">PERSONAL FINANCE</span>
+    <h2 id="pageTitle">Dashboard</h2>
+  </div>
+  <div class="topbar-actions">
+    <div class="user-chip"><div class="avatar" id="userAvatar">U</div><div><strong id="topUserName">User</strong><small id="topUserEmail">user@example.com</small></div></div>
+  </div>
+</header>
+
+    <main class="page-content" data-page="settings">
+
+<section class="page-heading"><span class="eyebrow">PREFERENCES</span><h1>Settings</h1><p class="muted">Personalize your account and finance dashboard.</p></section>
+<div id="settingsMessage" class="message hidden"></div>
+<section class="content-grid two-one">
+  <article class="form-card">
+    <h3>Profile</h3>
+    <form id="settingsForm" class="form-stack compact">
+      <label>Name<input id="settingsName" type="text" required></label>
+      <label>Email<input id="settingsEmail" type="email" required></label>
+      <label>Currency<select id="currencySelect"><option value="INR">INR ₹</option><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option></select></label>
+      <button class="btn btn-primary" type="submit">Save Settings</button>
+    </form>
+  </article>
+  <article class="panel">
+    <h3>Appearance</h3><p class="muted">Choose how FinTrack looks in your browser.</p>
+    <div class="setting-row"><div><strong>Dark Mode</strong><small>Use a darker interface.</small></div><label class="switch"><input id="darkModeToggle" type="checkbox"><span></span></label></div>
+    <div class="setting-row"><div><strong>Local Storage</strong><small>Your data stays in this browser.</small></div><span class="status-dot">Active</span></div>
+  </article>
+</section>
+<section class="danger-zone"><h3>Data Management</h3><p class="muted">This removes transactions, budgets and goals from this browser. Your local account remains available.</p><button id="clearAllData" class="btn btn-danger" type="button">Clear All Financial Data</button></section>
+
+    </main>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>
